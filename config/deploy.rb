@@ -1,8 +1,11 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.2"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "design_app"
+set :repo_url, "git@github.com:dg-spaceo/design_app.git"
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :rvm_ruby_version, '3.1.2'
+set :passenger_restart_with_touch, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

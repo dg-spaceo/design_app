@@ -86,3 +86,5 @@ production:
   database: design_app_production
   username: design_app
   password: <%= ENV["DESIGN_APP_DATABASE_PASSWORD"] %>
+  host: <%= ENV['DESIGN_APP_DATABASE_HOST'] %>
+  port: <%= ENV['DESIGN_APP_DATABASE_PORT'] %>
