@@ -61,11 +61,11 @@
 #   }
 
 
-role :app, %w{deploy_user@<public-ip-of-your-ec2-instance>}
-role :web, %w{deploy_user@<public-ip-of-your-ec2-instance>}
-role :db,  %w{deploy_user@<public-ip-of-your-ec2-instance>}
+role :app, %w{deploy_user@ec2-54-147-209-184.compute-1.amazonaws.com}
+role :web, %w{deploy_user@ec2-54-147-209-184.compute-1.amazonaws.com}
+role :db,  %w{deploy_user@ec2-54-147-209-184.compute-1.amazonaws.com}
 set :ssh_options, {
-   keys: %w(<absolute-path-to-your-ec2-key-pair-file>),
+   keys: %w(/home/sotsys161/.ssh/aws-rails-key.pem),
    forward_agent: false,
    auth_methods: %w(publickey password)
  }
