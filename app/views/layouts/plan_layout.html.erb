@@ -11,12 +11,7 @@
   </head>
 
   <body>
-    <%= render partial: 'common/nav_bar' %>
-    <div class="container">
-      <%= render partial: 'common/alert_message' %>
-      <div class="row">
-        <%= yield %>
-      </div>
-    </div>
+    <%= render partial: 'common/alert_message' %>
+    <%= yield %>
   </body>
 </html>

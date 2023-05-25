@@ -4,4 +4,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  namespace :admins do
+    get 'sign_in', to: 'sessions#new'
+    post 'sign_in', to: 'sessions#create'
+    delete 'sign_out', to: 'sessions#destroy'
+    get 'dashboard', to: 'dashboard#index'
+  end
+
 end
